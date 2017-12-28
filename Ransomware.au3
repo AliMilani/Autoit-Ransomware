@@ -38,8 +38,8 @@ Func Decrypt($file)
 	FileDelete($file)
 EndFunc
 
-Func GetFilesToDecrypt()
-	$files = _FileListToArrayRec(@DesktopDir, "*.CRYPTED", 1, 1, 0, 2)
+Func GetFilesToDecrypt($path)
+	$files = _FileListToArrayRec($path, "*.CRYPTED", 1, 1, 0, 2)
 	For $i = 1 To $files[0]
 			Decrypt($files[$i])
 	Next
